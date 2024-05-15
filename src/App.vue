@@ -1,7 +1,7 @@
 <template>
   <section id="inicio">
     <div class="contenido">
-        <header>
+        <header id="header">
           <div class="contenido-header">
             <div class="formas">
             <i class="fa-brands fa-bootstrap"></i>
@@ -18,7 +18,7 @@
                      </span>
                     </div>
                   </div>
-                  <nav class="navbar bg-purple fixed-top" type="ligth" v-show="showNavbar">
+                  <nav class="navbar bg-purple fixed-top" id="navbar" type="ligth">
                     <div class="container-fluid">
                       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -55,7 +55,6 @@
                   </nav>
             </div>
         </header>
-        <button @click="toggleNavbar">Toggle Navbar</button>
         <div class="presentacion">
             <p class="bienvenida">Bienvenidos</p>
             <h2>Hola esto es  <span>Bootstrap </span>Y les vamos a decir de que se trata esta libreria y su respectivo contenido.</h2>
@@ -280,6 +279,17 @@ export default {
     }
   }
 };
+let ubicacionPrincipal = window.scrollY;
+window.onscroll = function () {
+  let desplazamiento_Actual = window.scrollY;
+  if (ubicacionPrincipal >= desplazamiento_Actual) {
+    document.getElementById("header").style.top = "0";
+  } else {
+    document.getElementById("header").style.top = "-150px";
+  }
+  ubicacionPrincipal = desplazamiento_Actual;
+};
+
 </script>
 
 <style>
