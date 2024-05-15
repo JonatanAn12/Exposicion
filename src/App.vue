@@ -4,17 +4,13 @@
         <header>
             <div class="contenido-header">
                 <h1>Bootstrap</h1>
+                <div class="container">
                 <p>Presentado por: Jonatan Andres Sanchez Ayala</p>
-                <br>
-                                <p>Nikoll Valentina Melo Triana </p>    
+                <p>Nikoll Valentina Melo Triana </p>
+              </div>    
                 <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
                     <div class="bg-dark p-4">
-                      <h5 class="text-body-emphasis h4">Contenido</h5>
                       <span class="text-body-secondary">
-                        <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a></li>
-                        <li><a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a></li>
-                        <li><a href="#portafolio" onclick="seleccionar(this)">PORTAFOLIO</a></li>
-                        <li><a href="#contactos" onclick="seleccionar(this)">CONTACTOS</a></li>
                      </span>
                     </div>
                   </div>
@@ -25,35 +21,30 @@
                       </button>
                       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
-                          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Contenido</h5>
+                          <h3 class="offcanvas-title" id="offcanvasNavbarLabel" type="bienvenida">Contenido</h3>
                           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
                           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <button>
+                              <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#inicio">INICIO</a>
+                              </li>
+                            </button>
+                            <br>
+                            <button>
                             <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="#">Tipografia en Bootstrapt</a>
+                              <a class="nav-link active" aria-current="page" href="#contenido2">Tipografia en Bootstrapt</a>
                             </li>
+                          </button>
+                          <br>
+                            <button>
                             <li class="nav-item">
                               <a class="nav-link" href="#">Alertas en Bootstrapt</a>
                             </li>
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                  <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                              </ul>
-                            </li>
-                          </ul>
-                          <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                          </form>
+                          </button>
+                          <br>
+                         </ul>
                         </div>
                       </div>
                     </div>
@@ -63,12 +54,38 @@
         <div class="presentacion">
             <p class="bienvenida">Bienvenidos</p>
             <h2>Hola esto es  <span>Bootstrap </span>Y les vamos a decir de que se trata esta libreria y su respectivo contenido.</h2>
-            <p class="descripcion" >Soy un Joven apasioando por el tema de la programación. de manera que tanto me encanta
-                saber del desarrollo de software, aprendo de manera rapida y eficaz, siempre quise estudiar este arte tan hermoso 
-                y quiero conseguir grandes cosas a futuro.</p>
-            <a href="#portafolio">Ir a Portafolio</a>
+            <p class="descripcion" >Nuestro grupo nos toco los siguentes contenidos, les hablaremos un poco de las alertas y las Tipografias
+              de esta fabulosa libreria. sin antes contarles un poco sobre Bootstrap.</p>
+              <div class="boots">
+                <figure class="text-center">
+                  <blockquote class="blockquote">
+                <p class="h5"><u>Bootstrap es una popular Libreria de desarrollo web.</u> de código abierto que proporciona una colección de herramientas y estilos,
+                   para la creación rápida y sencilla de sitios web y aplicaciones responsivas. Surgió en 2011 como un proyecto interno de Twitter.
+                   inicialmente llamado "Twitter Blueprint" fue desarrollado por <strong>Mark Otto y Jacob Thornton</strong> de Twitter, con el objetivo de unificar la apariencia y la experiencia del usuario en sus diversas plataformas.
+                    Posteriormente, fue lanzado como un proyecto de código abierto bajo el nombre de Bootstrap. Su popularidad creció rápidamente gracias a su facilidad de uso,
+                     su amplia gama de componentes predefinidos y su capacidad de adaptarse a diferentes dispositivos y tamaños de pantalla. 
+                     Desde entonces, ha sido ampliamente adoptado por desarrolladores web de todo el mundo y ha evolucionado con el tiempo para mantenerse al día con las tendencias y necesidades del diseño web moderno.</p>
+                    </blockquote>
+                     <figcaption class="blockquote-footer">
+                      Desarrolladores: Mark Otto, Jacob Thornton y otros ingenieros de twitter
+                    </figcaption>
+                  </figure>
+                    </div>
         </div>
     </div>
+</section>
+<section id="contenido2">
+  <div class="contenido2">
+      <p class="titulo-seccion">Typografic</p>
+      <h2>Hola Estas Son las <span>Typografic</span> de Bootstrap</h2>
+      <h3>Desarrollador Full stack</h3>
+      <p>Soy una persona proactiva, excelente compañero de equipo, organizado y responsable. Disfruto
+          mucho aprender cosas nuevas, por lo que mi objetivo es un puesto desafiante y dinámico donde
+          poder compartir mi experiencia y a su vez sumar nuevos conocimientos, poder llevar mas
+          adelante mis conocimientos y tener un buen trabajo en equipo.</p>
+          
+          <h6>A continuación le </h6>
+  </div>
 </section>
 </template>
 
@@ -162,10 +179,12 @@ export default {
 }
 
 #inicio .contenido .presentacion .bienvenida {
-font-size: 16px;
-margin-bottom: 20px;
-text-transform: uppercase;
-letter-spacing: 5px;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #6e2cf3;
+  text-decoration: underline;
+  text-decoration-color: #d3d3d3;
+  text-decoration-thickness: 5px;
 }
 
 #inicion .contenido .presentacion h2 {
@@ -206,4 +225,90 @@ letter-spacing: 5px;
 .navbar-toggler-icon {
     background-color:  #6e2cf3;
 }
+
+#contenido2 {
+  max-width: 1100px;
+  margin: auto;
+  padding: 100px 15px;
+  color: #111135;
+  display: flex;
+}
+
+#contenido2 .contenido2 {
+  margin: 0 40px;
+}
+
+#contenido2 .contenido2 .titulo-seccion {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #6e2cf3;
+  text-decoration: underline;
+  text-decoration-color: #d3d3d3;
+  text-decoration-thickness: 5px;
+}
+
+#contenido2 .contenido2 h2 {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 20px 0;
+  letter-spacing: 2px;
+}
+
+#contenido2 .contenido2 h2 span {
+  color: #9800B7;
+}
+
+#contenido .contenido2 h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+#contenido2 .contenido2 p {
+  font-size: 14px;
+  line-height: 25px;
+  color: #565656;
+  margin-bottom: 12px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+
+button {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  background-color: #6e2cf3;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(110, 44, 243);
+  transition: box-shadow .5s
+}
+
+button:hover {
+  box-shadow: 0 0 10px rgba(110, 44, 243); 
+}
+
+#inicio .contenido header .contenido-header nav ul li button {
+  margin-right: 20px; 
+}
+
+h3 {
+  text-transform: uppercase;
+  color: #6e2cf3;
+  text-decoration: underline;
+  text-decoration-color: #d3d3d3;
+  text-decoration-thickness: 5px;
+}
+
+
 </style>
