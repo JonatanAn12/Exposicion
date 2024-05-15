@@ -2,7 +2,10 @@
   <section id="inicio">
     <div class="contenido">
         <header>
-            <div class="contenido-header">
+          <div class="contenido-header">
+            <div class="formas">
+            <i class="fa-brands fa-bootstrap"></i>
+          </div>
                 <h1>Bootstrap</h1>
                 <div class="container">
                 <p>Presentado por: Jonatan Andres Sanchez Ayala</p>
@@ -77,14 +80,25 @@
 <section id="contenido2">
   <div class="contenido2">
       <p class="titulo-seccion">Typografic</p>
-      <h2>Hola Estas Son las <span>Typografic</span> de Bootstrap</h2>
-      <h3>Desarrollador Full stack</h3>
-      <p>Soy una persona proactiva, excelente compañero de equipo, organizado y responsable. Disfruto
-          mucho aprender cosas nuevas, por lo que mi objetivo es un puesto desafiante y dinámico donde
-          poder compartir mi experiencia y a su vez sumar nuevos conocimientos, poder llevar mas
-          adelante mis conocimientos y tener un buen trabajo en equipo.</p>
+      <h2>Estas Son las <span>Typografic</span> de Bootstrap</h2>
+      <h3>Headings</h3>
+      <p>Bootstrap establece estilos básicos de visualización, tipografía y enlaces globales. Cuando se necesita más control, consulta las clases de utilidades textuales.
+
+        Utiliza una pila de fuentes nativas que seleccione la mejor font-family para cada sistema operativo y dispositivo.
+        Para una escala de tipos más inclusiva y accesible, utilizamos el font-size raíz predeterminado del navegador (normalmente 16x) para que los visitantes puedan personalizar los valores predeterminados de su navegador según sea necesario.
+        Usa los atributos $font-family-base, $font-size-base y $line-height-base como nuestra base tipográfica aplicada al <strong>"body"</strong>
+        Establece el color global de enlaces a través de $link-color.
+        Usa $body-bg para establecer un background-color en "body" (#fff por defecto).
+        Estos estilos se pueden encontrar dentro de _reboot.scss, y las variables globales se definen en _variables.scss. Asegúrate de configurar $font-size-base en rem.</p>
           
-          <h6>A continuación le </h6>
+          <h6>A continuación le mostraremos ejemplos y usos</h6>
+
+          <h1>h1. Bootstrap heading</h1>
+          <h2>h2. Bootstrap heading</h2>
+          <h3>h3. Bootstrap heading</h3>
+          <h4>h4. Bootstrap heading</h4>
+          <h5>h5. Bootstrap heading</h5>
+          <h6>h6. Bootstrap heading</h6>
   </div>
 </section>
 </template>
@@ -99,7 +113,7 @@ export default {
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     font-family: 'Montserrat';
 }
 
@@ -217,11 +231,6 @@ export default {
     text-transform: uppercase;
     transition: .5s;
 }
-
-#inicio .contenido .presentacion a:hover {
-    background-color: #9800B7;
-} 
-
 .navbar-toggler-icon {
     background-color:  #6e2cf3;
 }
@@ -267,7 +276,7 @@ export default {
 }
 
 #contenido2 .contenido2 p {
-  font-size: 14px;
+  font-size: 22px;
   line-height: 25px;
   color: #565656;
   margin-bottom: 12px;
@@ -302,7 +311,7 @@ button:hover {
   margin-right: 20px; 
 }
 
-h3 {
+#inicio .contenido header .contenido-header nav ul li button h3 {
   text-transform: uppercase;
   color: #6e2cf3;
   text-decoration: underline;
@@ -310,5 +319,22 @@ h3 {
   text-decoration-thickness: 5px;
 }
 
+.formas {
+  display: inline-block
+
+}
+
+.formas i {
+  text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    font-size: 40px;
+}
+
+.navbar bg-purple fixed-top {
+  margin-top: 1px;
+}
 
 </style>
