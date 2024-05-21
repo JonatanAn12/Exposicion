@@ -6,12 +6,12 @@
             <div class="formas">
             <i class="fa-brands fa-bootstrap"></i>
           </div>
-                <h1>Bootstrap</h1>
+                <h1 class="mi-clase">Bootstrap</h1>
                 <br>
                 <div class="container">
-                <p>Presentado por: Jonatan Andres Sanchez Ayala</p>
-                <p>Nikoll Valentina Melo Triana </p>
-              </div>    
+                <p class="mi-clase">Presentado por: Jonatan Andres Sanchez Ayala</p>
+                <p class="mi-clase">Nikoll Valentina Melo Triana </p>
+              </div>  
                 <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
                     <div class="bg-dark p-2">
                       <span class="text-body-secondary">
@@ -23,7 +23,7 @@
                       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
-                      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
                           <h3 class="offcanvas-title" id="offcanvasNavbarLabel" type="bienvenida">Contenido</h3>
                           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -56,8 +56,8 @@
             </div>
         </header>
         <div class="presentacion">
-            <p class="bienvenida">Bienvenidos</p>
-            <h2>Hola esto es  <span>Bootstrap </span>Y les vamos a decir de que se trata esta libreria y su respectivo contenido.</h2>
+            <p class="bienvenida" id="responsive">Bienvenidos</p>
+            <h2 class="responsive">Hola esto es  <span>Bootstrap </span>Y les vamos a decir de que se trata esta libreria y su respectivo contenido.</h2>
             <p class="descripcion" >Nuestro grupo nos toco los siguentes contenidos, les hablaremos un poco de las alertas y las Tipografias
               de esta fabulosa libreria. sin antes contarles un poco sobre Bootstrap.</p>
               <div class="boots">
@@ -267,18 +267,6 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      showNavbar: true 
-    };
-  },
-  methods: {
-    toggleNavbar() {
-      this.showNavbar = !this.showNavbar;
-    }
-  }
-};
 let ubicacionPrincipal = window.scrollY;
 window.onscroll = function () {
   let desplazamiento_Actual = window.scrollY;
@@ -532,14 +520,34 @@ window.onscroll = function () {
   height: 20px; 
 }
 
-@media (max-width: 768px) {
+@media (min-width: 568px) {
   .navbar-custom {
     height: 50px; 
   }
+  .container, .container-lg, .container-md, .container-sm {
+    min-width: 320px;
+}
+  .container  {
+    display: grid;
+    grid-column:calc(2,1);
+}
 }
 
+@media (max-width: 700px) {
+  .mi-clase {
+    font-size: 15px; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  #responsive .responsive {
+    font-size: 1.2em;
+    margin: auto;
+    padding: auto;
 
-
+  }
+}
 
 
 </style>
