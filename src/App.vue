@@ -536,17 +536,18 @@ window.onscroll = function () {
 
 @media (max-width: 700px) {
   .mi-clase {
-    font-size: 15px; 
+    font-size: 14px; 
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-between;
   }
   #responsive .responsive {
-    font-size: 1.2em;
-    margin: auto;
-    padding: auto;
-
+    min-width: 200px;
+    margin: 25px auto;
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
   }
 }
 
