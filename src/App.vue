@@ -83,6 +83,8 @@
                      <figcaption class="blockquote-footer">
                       Desarrolladores: Mark Otto, Jacob Thornton y otros ingenieros de twitter
                     </figcaption>
+                    <img src="./img/98681.jpg" class="rounded float-start" width="200px" height="200px">Mark otto 
+                    <img src="./img/jacob-thornton.jpg" class="rounded float-end" width="200px" height="200px"> Jacob Thornton
                   </figure>
                     </div>
         </div>
@@ -599,13 +601,15 @@ window.onscroll = function () {
 }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .mi-clase {
+    display: block ;
     font-size: 14px; 
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-between;
+    
   }
   #responsive .responsive {
     min-width: 200px;
