@@ -1,6 +1,7 @@
 <template>
   <section id="inicio">
     <div class="contenido">
+      
         <header id="header">
           <div class="contenido-header">
             <div class="formas">
@@ -11,7 +12,7 @@
                 <div class="container">
                 <p class="mi-clase">Presentado por: Jonatan Andres Sanchez Ayala</p>
                 <p class="mi-clase">Nikoll Valentina Melo Triana </p>
-              </div>  
+              </div>   
                 <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
                     <div class="bg-dark p-2">
                       <span class="text-body-secondary">
