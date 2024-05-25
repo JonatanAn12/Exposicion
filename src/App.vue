@@ -75,7 +75,7 @@
                     </figcaption>
                     <img src="./img/98681.jpg" class="rounded float-start" width="200px" height="200px">Mark otto 
                     <img src="./img/jacob-thornton.jpg" class="rounded float-end" width="200px" height="200px"> Jacob Thornton
-                  </figure>
+                   </figure>
                     </div>
         </div>
     </div>
@@ -319,12 +319,19 @@
         <strong>Holy guacamole!</strong> You should check in on some of those fields below.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
-      
+      <br>
+      <u><h3>Alerta con boton</h3></u>
+      <br>
+      <div class="container mt-5">
+        <div id="liveAlertPlaceholder"></div>
+        <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+    </div>
     </div>
   </section>
 </template>
 
 <script>
+//*desaparecer header// 
 let ubicacionPrincipal = window.scrollY;
 window.onscroll = function () {
   let desplazamiento_Actual = window.scrollY;
@@ -336,6 +343,22 @@ window.onscroll = function () {
   ubicacionPrincipal = desplazamiento_Actual;
 };
 
+//* funcion alerta del boton//
+var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+var alertTrigger = document.getElementById('liveAlertBtn')
+
+function alert(message, type) {
+  var wrapper = document.createElement('div')
+  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+  alertPlaceholder.append(wrapper)
+}
+
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', function () {
+    alert('Genial, activaste este mensaje de alerta.', 'success')
+  })
+}
 </script>
 
 <style>
